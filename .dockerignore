@@ -1,15 +1,92 @@
+# Dependencies
 */node_modules
-npm-debug.log
-.dockerignore
-.git
-docker-compose*.yml
-Dockerfile
-.tool-versions
-.env*
+api/.venv
 .venv*
+
+# Build artifacts
+api/static
+api/staticfiles
+frontend/build
+frontend/dist
+*.pyc
+**/__pycache__
+**/*.pyo
+**/*.pyd
+.Python
+*.so
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pip-log.txt
+
+# Environment files
+.env*
+!.env.example
+
+# Git
+.git
+.gitignore
+.git-blame-ignore-revs
+
+# IDE
 .idea
+.vscode
+*.swp
+*.swo
+*~
+
+# Docker
+docker-compose*.yml
+Dockerfile*
+.dockerignore
+
+# Documentation
+docs/
+*.md
+!LICENSE.md
+!readme.md
+!README.md
+
+# CI/CD
+.github
+.pre-commit-config.yaml
+# .release-please-manifest.json - NEEDED for build
+# release-please-config.json
+
+# Testing
+tests/
+api/tests/
+api/conftest.py
+api/e2etests/
+api/jmeter-tests/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.dmypy.json
+**/*.test.js
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.js
+**/*.spec.ts
+**/*.spec.tsx
+
+# Elastic Beanstalk config (not needed in container)
+api/.ebextensions/
+api/.ebignore
+api/Procfile
+
+# Misc
+.tool-versions
+.direnv
 .elasticbeanstalk
 .ebignore
 .ebextensions
-.direnv
-.github
+.husky
+
+# OS files
+.DS_Store
+Thumbs.db

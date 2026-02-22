@@ -484,6 +484,11 @@ const Utils = Object.assign({}, require('./base/_utils'), {
     return true
   },
   getPlansPermission: (feature: PaidFeature) => {
+    // Always allow creating additional projects
+    if (feature === 'CREATE_ADDITIONAL_PROJECT') {
+      return true
+    }
+
     const isOrgPermission = feature !== '2FA'
     let plans
     if (isOrgPermission) {
